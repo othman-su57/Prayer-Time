@@ -36,7 +36,7 @@ mvn --version
 Clone the repository and build the project using Maven:
 ```bash
 
-git clone https://github.com/othman-su57/Prayer-Time.git](https://github.com/othman-su57/Prayer-Time.git
+git clone https://github.com/othman-su57/Prayer-Time.git
 cd Prayer-Time
 
 mvn clean package
