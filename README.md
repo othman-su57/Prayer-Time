@@ -21,7 +21,7 @@ Designed to be:
 
 ## 🛠 Prerequisites
 
-* **Java JDK 25**
+* **Java JDK 21**
 * **Maven 3.9.12** or newer
 
 Check your versions:
@@ -39,7 +39,7 @@ Clone the repository and build the project using Maven:
 git clone https://github.com/othman-su57/Prayer-Time.git
 cd Prayer-Time
 
-./mvnw clean package
+mvn clean package
 ```
 After a successful build, the JAR file will be generated in: target/PrayerTime-1.0-SNAPSHOT.jar
 
