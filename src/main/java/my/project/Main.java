@@ -91,9 +91,11 @@ public class Main {
         try {
             response = client.send(request, HttpResponse.BodyHandlers.ofString()).body();
         } catch (IOException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            System.exit(1);
         } catch (InterruptedException e) {
-            throw new RuntimeException(e);
+            e.printStackTrace();
+            System.exit(1);
         }
         JsonObject json = JsonParser.parseString(response).getAsJsonObject();
 
@@ -101,8 +103,8 @@ public class Main {
     }
     private static void creatTempLocation(){
         if(!TEMPFILE.exists()){
+            double [] loc = getLocation();
             try(FileWriter fr = new FileWriter(TEMPFILE);){
-                double [] loc = getLocation();
                 fr.write(loc[0]+" "+loc[1]);
             } catch (IOException fne){
                 fne.printStackTrace();
